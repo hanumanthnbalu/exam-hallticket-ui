@@ -4,6 +4,7 @@
   --dark: #5b5b59;
   --gray: #cdcdcd;
 }
+
 body {
   margin: 0;
   padding: 0;
@@ -12,23 +13,71 @@ body {
 .main {
   max-width: 1200px;
   margin: 0 auto;
-  padding: 1rem;
+  padding: 10px;
   background-image: url(/login-bg.png);
   border: 3px solid var(--primary);
   border-radius: 10px;
   margin-top: 60px;
 }
+.border {
+  border: 1px solid var(--primary);
+  padding: 10px;
+  border-radius: 10px;
+}
 .header {
   display: flex;
   justify-content: space-between;
 }
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+  text-align: center;
+}
+.border {
+  border: 1px solid;
+  color: var(--primary);
+  font-weight: 600;
+}
+table,
+th {
+  border: 1px solid black;
+}
+
+th {
+  vertical-align: middle;
+  color: var(--primary);
+}
+.text-center {
+  text-align: center;
+}
+td {
+  text-align: left;
+  border-right: 1px solid #333;
+  padding: 5px;
+}
+
+td:empty:after {
+  content: "\00a0";
+}
+
 h2 {
   color: var(--primary);
   text-transform: uppercase;
+  text-align: center;
+}
+h3 {
+  color: var(--primary);
+  text-transform: capitalize;
+  text-align: center;
 }
 .description {
   text-align: center;
   text-transform: uppercase;
+}
+.desc {
+  text-align: left;
+  text-transform: capitalize;
 }
 .logo,
 .avatar {
@@ -73,4 +122,27 @@ img {
   text-transform: uppercase;
   font-weight: bold;
   margin: 0 15%;
+}
+
+table {
+  width: 100%;
+  border: 1px solid var(--primary);
+  padding: 1rem;
+}
+.gpa {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  border: 1px solid var(--primary);
+  border-top: none;
+  padding: 1rem;
+}
+.gpa-para {
+  color: var(--primary);
+  text-transform: uppercase;
+}
+.sign {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
 }
